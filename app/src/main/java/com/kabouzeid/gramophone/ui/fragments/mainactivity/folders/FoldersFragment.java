@@ -268,10 +268,10 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
     }
 
     public static File getDefaultStartDirectory() {
-        File musicDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC);
+        File externalStorageDir = Environment.getExternalStorageDirectory();
         File startFolder;
-        if (musicDir.exists() && musicDir.isDirectory()) {
-            startFolder = musicDir;
+        if (externalStorageDir.exists() && externalStorageDir.isDirectory()) {
+            startFolder = externalStorageDir;
         } else {
             File externalStorage = Environment.getExternalStorageDirectory();
             if (externalStorage.exists() && externalStorage.isDirectory()) {
